@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 dtIn = input("Enter file name: ")
 dtOut = input("Enter Output file name: ")
 data = pd.read_csv(dtIn, skiprows=5)
-data['Fraction'] = pop['Total Children in Shelter']/pop['Total Individuals in Shelter']
+data['Fraction Children'] = data['Total Children in Shelter']/data['Total Individuals in Shelter']
 
-data.plot(x = "Date of Census", y = "Fraction")
+data.plot(x = "Date of Census", y = "Fraction Children")
 #plt.show()
 
 fig = plt.gcf()
